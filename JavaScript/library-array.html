@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array library methods</title>
+</head>
+<body>
+    <script>
+        var names=["Saiful","Shariful","Beautifful","Ashraful","Kolmiful","Golapful"];
+
+        //shift-->pop(শেষ থেকে রিমুভ করে) এর বিপরীত যা প্রথম থেকে রিমুভ করবে
+        //names.shift()
+        //console.log(names)
+        
+        //unshift-->opposite of push
+        //names.unshift("Sagor")
+        //console.log(names)
+
+        //splice method--> এ আমরা ৪টি প্যারামিটার ব্যবহার করতে পারি। এর সাহায্যে এলিমেন্ট এড করা যায় এবং রিমুভ করা যায়।
+        
+        //Systems of Add Element:
+        //প্রথমটি হল আমি কোন পজিশনে এলিমেন্ট এড করতে চাচ্ছি ।দ্বিতীয়টি হচ্ছে কতগুলো এলিমেন্ট আমি রিমুভ করতে চাচ্ছি। যেমন: names.splice(2,0,"Rahim","Karim")
+
+        //Adding Elements using Splice
+        //names.splice(2,0,"Rahim","Karim")
+        //console.log(names)
+
+        //Removing Elements using Splice || splice(1,2)-->First value for start & second value for ending
+        //names.splice(1,2)
+        //console.log(names)
+
+        //Slice Method
+        //var newArray=names.slice(3) //এখানে প্রথম তিনটা রিমুভ করবে। চাইলে এর শুরু এবং শেষও নির্ধারণ করা যাবে (1,3) ,এখানে প্রথমটি হচ্ছে স্টারর্টিং পয়েন্ট এবং দ্বিতীয়টি হচ্ছে এন্ডিং পয়েন্ট।
+        //console.log(newArray)
+        //console.log(names)
+
+        //Sort Method
+        var sortedNames=names.sort()
+        //names.reverse() //this is for reverse
+        console.log(sortedNames)
+
+        //Sort Method for Numbers
+        var numbers=[20,5,25,45,1]
+        numbers.sort(function(a,b){
+            return a-b;//উল্টোদিকে সর্টিং করার জন্য (b-a)
+        })
+        console.log(numbers)
+    </script>
+</body>
+</html>

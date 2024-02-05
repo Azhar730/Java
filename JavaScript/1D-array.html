@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.clear
+        function highestScore(scores){
+            var max=scores[0];
+            for(var x=1; x<scores.length; x=x+1){
+                if(max<scores[x]){
+                    max=scores[x];
+                }
+            }
+            return max;
+        }
+        let scores=[21,28,1,88,15,520,456,980];
+        var maxScore=highestScore(scores);
+        console.log(maxScore);
+    </script>
+</body>
+</html>

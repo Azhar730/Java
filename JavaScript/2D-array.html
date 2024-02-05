@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function highestRunScorer(playersInfo){
+            var highscorer=playersInfo[0][0]
+            var highscore=playersInfo[0][1]
+            for(var x=1; x<playersInfo.length; x++){
+
+                if(highscore<playersInfo[x][1]){
+                    highscore=playersInfo[x][1]
+                    highscorer=playersInfo[x][0]
+                }
+
+            }return highscore;
+        }
+        var playersInfo=[
+        ["Mushfik",9],["Sakib,64"],["Tamim",32],["Rubel",56],["Nasim,38"]
+        ]
+        var name=highestRunScorer(playersInfo)
+        console.log(name);
+    </script>
+</body>
+</html>

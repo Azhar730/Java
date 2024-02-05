@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //adding a constructor
+        function Student(Name,Age,CGPA,Language){
+            this.Name=Name;
+            this.Age=Age;
+            this.CGPA=CGPA;
+            this.Language=Language;
+
+            //adding function inside a construct
+
+            this.display = function(){
+                console.log(this.Name);
+                console.log(this.Age);
+                console.log(this.CGPA);
+                console.log(this.Language);
+            }
+
+        }
+        var Student1 = new Student("Azhar Mahmud",23,3.67,["Bengali","Arbi","Urdu"]);
+        var Student2 = new Student("Karim",24,3.34,["Bengali","English","Arbi"]);
+        var Student3 = new Student("Rahim",26,3.38,["Bengali","Farsi","Partuguese"]);
+        var Student4 = new Student("Abdul",27,3.40,["Bengali","Spanish","Greek"]);
+
+        Student1.display()
+    </script>
+</body>
+</html>
