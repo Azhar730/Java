@@ -1,7 +1,7 @@
 const products= [
     {Name:"Shampoo", Price: 300, quantity: 2},
     {Name:"Shirt", Price: 700, quantity: 2},
-    {Name:"Pant", Price: 1300, quantity: },
+    {Name:"Pant", Price: 1300, quantity: 1},
     {Name:"T-Shirt", Price: 1800,  quantity: 1},
     {Name:"Jangiya", Price: 100, quantity: 1}
 ]
