@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Alpha</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--link css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!--extra style-->
+    <style>
+        .font-anton{
+            font-family: "Anton", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main class="bg-[#010313] min-h-screen bg-no-repeat bg-center text-[#FFF] bg-[url(images-alpha/background.png)]">
+        <section id="home-screen" class="flex flex-col gap-4 justify-center items-center min-h-screen">
+            <h1 class="text-[160px] font-anton">ALPHABET CLASH</h1>
+            <p>Unleash Your Keyboard Kung FU : Press "Enter" to Play</p>
+            <button onclick="play()" class="btn font-bold">Play Now</button>
+        </section>
+        <section id="play-ground" class="hidden">
+            <!--Display-->
+            <div class="flex items-center justify-center gap-20 pt-20">
+                <div class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] bg-[#FFFFFFB3] rounded-md">
+                    <div class="bg-[#2F2941] w-[396px] h-[36px] rounded-b-xl m-auto">
+                        <p class="text-[#FFF] flex justify-center">Don't Watch Keyboard while Playing...</p>
+                    </div>
+                    <div class="flex items-center justify-center h-full">
+                        <p id="current-alphabet" class="text-9xl text-[#010313] uppercase"></p>
+                    </div>
+                </div>
+            </div>
+            <!--Keyboard-->
+            <div class="text-[#010313] mt-20">
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="q" class="kbd">q</kbd>
+                    <kbd id="w" class="kbd">w</kbd>
+                    <kbd id="e" class="kbd">e</kbd>
+                    <kbd id="r" class="kbd">r</kbd>
+                    <kbd id="t" class="kbd">t</kbd>
+                    <kbd id="y" class="kbd">y</kbd>
+                    <kbd id="u" class="kbd">u</kbd>
+                    <kbd id="i" class="kbd">i</kbd>
+                    <kbd id="o" class="kbd">o</kbd>
+                    <kbd id="p" class="kbd">p</kbd>
+                </div> 
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="a" class="kbd">a</kbd>
+                    <kbd id="s" class="kbd">s</kbd>
+                    <kbd id="d" class="kbd">d</kbd>
+                    <kbd id="f" class="kbd">f</kbd>
+                    <kbd id="g" class="kbd">g</kbd>
+                    <kbd id="h" class="kbd">h</kbd>
+                    <kbd id="j" class="kbd">j</kbd>
+                    <kbd id="k" class="kbd">k</kbd>
+                    <kbd id="l" class="kbd">l</kbd>
+                </div> 
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="z" class="kbd">z</kbd>
+                    <kbd id="x" class="kbd">x</kbd>
+                    <kbd id="c" class="kbd">c</kbd>
+                    <kbd id="v" class="kbd">v</kbd>
+                    <kbd id="b" class="kbd">b</kbd>
+                    <kbd id="n" class="kbd">n</kbd>
+                    <kbd id="m" class="kbd">m</kbd>
+                    <kbd id="/" class="kbd">/</kbd>
+                </div>
+            </div>
+            <div class="score flex justify-between mt-24">
+                <button class="flex items-center bg-purple-600 p-4 rounded-full"><span class="text-lg">Life</span><img class="ml-1" src="images-alpha/heart.svg" alt=""><span class="ml-1 text-xl" id="current-life">5</span></button>
+                <button class="flex items-center bg-blue-900 p-4 rounded-full"><span class="text-xl">Score</span><img src="images-alpha/doler.png" alt=""><span id="current-score" class="text-xl">0</span></button>
+            </div>
+        </section>
+        <section id="final-stage" class="hidden score flex flex-col items-center justify-center min-h-screen">
+            <div class="bg-[#FFFFFF33] rounded-xl p-16 flex flex-col items-center justify-center gap-y-4">
+                <h1 class="text-5xl font-bold">Score : <span id="last-score"></span></h1>
+                <button onclick="play()" class="btn bg-[#FFF] text-black font-bold">Play Again</button>
+                <p>Practice Will Make You Pro</p>
+            </div>
+        </section>
+    </main>
+    <script src="utility.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
